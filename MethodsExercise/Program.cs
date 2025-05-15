@@ -37,6 +37,42 @@
             ConvoContinuation(movie:"");
             ConvoIntoActor(actor:"");
             ExitConversation("");
+            
+            Console.WriteLine(Addition(5, 10)); //Output = 15
+            Console.WriteLine(Subtraction(4, 14)); //Output = -10
+            Console.WriteLine(Multiplication(6, 8)); //Output = 48
+            Console.WriteLine(Division (81, 9)); //Output = 9
+            Console.WriteLine(PracAdd(11, 11, 22));
+        }
+
+        static int Addition(int amntOne, int amntTwo)
+        {
+            return amntOne + amntTwo;
+        }
+
+        static int Subtraction(int amntOne, int amntTwo)
+        {
+            return amntOne - amntTwo;
+        }
+
+        static int Multiplication(int amntOne, int amntTwo)
+        {
+            return amntOne * amntTwo;
+        }
+
+        static int Division(int amntOne, int amntTwo)
+        {
+            return amntOne / amntTwo;
+        }
+
+        public static int PracAdd(params int[] numbers)
+        {
+            int sum = 0;
+            foreach (int number in numbers)
+            {
+                sum+=number;
+            }
+            return sum;
         }
     }
 }
